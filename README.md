@@ -3,6 +3,7 @@ SG Service Plus Page
 
 ## Architecture 
 
+```mermaid
 flowchart TB
     subgraph "Developer Environment"
         DEV[Developer] -->|Git Push| GIT[GitHub Repository]
@@ -38,8 +39,11 @@ flowchart TB
     style ACTION fill:#24292e
     style BUILD fill:#24292e
     style PAGES fill:#24292e
+```
 
  ## Deployment
+
+ ```mermaid
 sequenceDiagram
     participant Dev as Developer
     participant Git as GitHub
@@ -60,3 +64,4 @@ sequenceDiagram
     DNS->>User: Return Cloudflare IP
     User->>CF: Request page
     CF->>User: Serve cached content
+ ``` 
